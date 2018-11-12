@@ -35,22 +35,22 @@
       <div class="toolbar tabbar-labels toolbar-bottom-md">
         <div class="toolbar-inner">
           <a href="#view-home" class="tab-link tab-link-active">
-            <i class="icon f7-icons ios-only">home</i>
-            <i class="icon f7-icons ios-only icon-ios-fill">home_fill</i>
-            <i class="icon material-icons md-only">home</i>
-            <span class="tabbar-label">Home</span>
-          </a>
-          <a href="#view-catalog" class="tab-link">
             <i class="icon f7-icons ios-only">list</i>
             <i class="icon f7-icons ios-only icon-ios-fill">list_fill</i>
             <i class="icon material-icons md-only">view_list</i>
-            <span class="tabbar-label">Catalog</span>
+            <span class="tabbar-label">Listings</span>
           </a>
-          <a href="#view-settings" class="tab-link">
-            <i class="icon f7-icons ios-only">settings</i>
-            <i class="icon f7-icons ios-only icon-ios-fill">settings_fill</i>
-            <i class="icon material-icons md-only">settings</i>
-            <span class="tabbar-label">Settings</span>
+          <a href="#view-messages" class="tab-link">
+            <i class="icon f7-icons ios-only">chat</i>
+            <i class="icon f7-icons ios-only icon-ios-chat">chat</i>
+            <i class="icon material-icons md-only">chat</i>
+            <span class="tabbar-label">Messages</span>
+          </a>
+          <a href="#view-profile" class="tab-link">
+            <i class="icon f7-icons ios-only">person</i>
+            <i class="icon f7-icons ios-only icon-ios-person">person</i>
+            <i class="icon material-icons md-only">person</i>
+            <span class="tabbar-label">Profile</span>
           </a>
         </div>
       </div>
@@ -79,26 +79,48 @@
 
           <!-- Scrollable page content-->
           <div class="page-content">
-            <div class="block block-strong">
-              <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
-              <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
-            </div>
-
-            <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div>
+            <div class="block-title searchbar-hide-on-search">Specifically taylored job listings that best match your profile</div>
             <div class="list links-list searchbar-hide-on-search">
-              <ul>
-                <li>
-                  <a href="/page-loader-template7/vladimir/123/about-me/1/?start=0&end=30#top">Template7 Page</a>
-                </li>
-                <li>
+              <ul id="job_listings">
+                <!-- <li>
                   <a href="/page-loader-component/vladimir/123/about-me/1/?start=0&end=30#top">Component Page</a>
+                </li> -->
+                <li>
+                    <a href="#">JFK Security Guard</a>
                 </li>
                 <li>
-                  <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
+                    <a href="#">Smithtown High School Security Guard</a>
                 </li>
                 <li>
-                  <a href="/request-and-load/user/123456/">Request Data & Load</a>
+                    <a href="#">Public Saftey</a>
                 </li>
+                <li>
+                    <a href="#">Roosevelt Field Mall Guard</a>
+                </li>
+                <li>
+                    <a href="#">ADT Home Security Guard</a>
+                </li>
+                <li>
+                    <a href="#">Corporate Security Guard</a>
+                </li>
+                <li>
+                    <a href="#">Warehouse Security Guard</a>
+                </li>
+                <li>
+                    <a href="#">Construction Security Guard</a>
+                </li>
+                <!-- <li>
+                    <a href="#">Example Job Title 9</a>
+                </li>
+                <li>
+                    <a href="#">Example Job Title 10</a>
+                </li>
+                <li>
+                    <a href="#">Example Job Title 11</a>
+                </li>
+                <li>
+                    <a href="#">Example Job Title 12</a>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -106,12 +128,12 @@
       </div>
 
       <!-- Catalog View -->
-      <div id="view-catalog" class="view tab">
+      <div id="view-messages" class="view tab">
         <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
       </div>
 
       <!-- Settings View -->
-      <div id="view-settings" class="view tab">
+      <div id="view-profile" class="view tab">
         <!-- Settings page will be loaded here dynamically from /settings/ route -->
       </div>
     </div>
@@ -147,9 +169,9 @@
               <ul>
                 <li class="item-content item-input">
                   <div class="item-inner">
-                    <div class="item-title item-label">Username</div>
+                    <div class="item-title item-label">Email</div>
                     <div class="item-input-wrap">
-                      <input type="text" name="username" placeholder="Your username">
+                      <input type="text" name="email" placeholder="Your email">
                     </div>
                   </div>
                 </li>
@@ -186,6 +208,9 @@
 
   <!-- App routes -->
   <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/jquery.js"></script>
 
   <!-- Your custom app scripts -->
   <script src="js/app.js"></script>

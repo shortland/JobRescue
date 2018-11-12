@@ -1,0 +1,99 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">{{product.title}}</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block-title">About {{product.title}}</div>
+      <div class="page">
+        <div class="toolbar messagebar" style="bottom:56px !important;">
+          <div class="toolbar-inner">
+            <div class="messagebar-area">
+              <textarea class="resizable" placeholder="Message"></textarea>
+            </div><a class="link send-link" href="#">Send</a>
+          </div>
+        </div>
+        <div class="page-content messages-content">
+          <div class="messages">
+            <!-- Date stamp -->
+            <div class="messages-title"><b>Sunday, Feb 9</b> 12:58</div>
+      
+            <!-- Sent message (by default - green and on right side) -->
+            <div class="message message-sent">
+              <div class="message-content">
+                <!-- Bubble with text -->
+                <div class="message-bubble">
+                  <div class="message-text">Hi, how are you?</div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Another sent message -->
+            <div class="message message-sent">
+              <div class="message-content">
+                <div class="message-bubble">
+                  <div class="message-text">Can you tell me more about your employer?</div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Received message (by default - grey on left side) -->
+            <div class="message message-with-avatar message-received">
+                <!-- Sender avatar -->
+                <!--{{product.pic}}-->
+                <!--<div style="background-image:url()" ></div>-->
+  
+                <!-- Sender name -->
+                <div class="message-name">Kate</div>
+                &nbsp;&nbsp;
+                <!-- Bubble with text -->
+                <div class="message-bubble">
+                  <div class="message-text">I am fine, thanks</div>
+                </div>  
+              </div>
+
+            <!-- Received message (by default - grey on left side) -->
+            <div class="message message-with-avatar message-received">
+                <!-- Sender avatar -->
+                <!--{{product.pic}}-->
+                <!--<div style="background-image:url()" ></div>-->
+  
+                <!-- Sender name -->
+                <div class="message-name">Kate</div>
+                &nbsp;&nbsp;
+                <!-- Bubble with text -->
+                <div class="message-bubble">
+                  <div class="message-text">Of course, my employer is looking for someone who ... ... ...</div>
+                </div>  
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    data: function () {
+      var productId = this.$route.params.id;
+      var currentProduct;
+      this.$root.products.forEach(function (product) {
+        if (product.id === productId) {
+          currentProduct = product;
+        }
+      });
+      return {
+        product: currentProduct,
+      };
+    }
+  };
+</script>

@@ -12,12 +12,24 @@ routes = [
     componentUrl: './pages/catalog.html',
   },
   {
+    path: '/messages/',
+    componentUrl: './pages/messages.html',
+  },
+  {
+    path: '/message/:id/',
+    componentUrl: './pages/message.html',
+  },
+  {
     path: '/product/:id/',
     componentUrl: './pages/product.html',
   },
   {
     path: '/settings/',
     url: './pages/settings.html',
+  },
+  {
+    path: '/profile/',
+    url: './pages/profile.html',
   },
   // Page Loaders & Router
   {
